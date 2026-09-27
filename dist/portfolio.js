@@ -44,6 +44,8 @@
     ['Claude', 'claude', 'ai', 'AI assistant', 'Cl'],
     ['ChatGPT', 'chatgpt', 'ai', 'AI assistant', 'AI'],
     ['Gemini', 'gemini', 'ai', 'AI assistant', 'Ge'],
+    ['Codex', 'chatgpt', 'ai', 'AI coding', 'Cx'],
+    ['Claude Code', 'claude', 'ai', 'AI coding', 'CC'],
   ];
   const gallery = document.querySelector('#tech-grid');
   const filters = [...document.querySelectorAll('[data-tool-filter]')];
