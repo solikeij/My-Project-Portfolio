@@ -34,6 +34,7 @@
     ['Flutter', 'flutter', 'development', 'UI toolkit', 'Fl'],
     ['C#', 'csharp', 'development', 'Language', 'C#'],
     ['Git', 'git', 'development', 'Version control', 'Git'],
+    ['GitHub', 'github', 'development', 'Code hosting', 'GH'],
     ['Roblox Studio', 'robloxstudio', 'development', 'Game creation', 'RS'],
     ['AWS', 'aws', 'development', 'Cloud services', 'AWS'],
     ['Figma', 'figma', 'creative', 'Interface design', 'Fi'],
@@ -63,7 +64,7 @@
       image.width = 36;
       image.height = 36;
       image.loading = 'lazy';
-      if (['capcut', 'aseprite', 'claude', 'chatgpt', 'robloxstudio'].includes(file)) image.className = 'monochrome';
+      if (['capcut', 'aseprite', 'claude', 'chatgpt', 'robloxstudio', 'github'].includes(file)) image.className = 'monochrome';
       image.addEventListener('load', () => icon.classList.add('has-icon'));
       image.addEventListener('error', () => { image.remove(); icon.classList.remove('has-icon'); });
       image.src = `assets/icons/${file}.svg`;

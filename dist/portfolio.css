@@ -102,3 +102,65 @@
 @media (max-width: 360px) {
   .header .nav { gap: 9px; }.header .nav a { font-size: 12px; }.content-panel { padding-left: 16px; padding-right: 16px; }.content-panel h2 { font-size: 33px; }.contact-footer h2 { font-size: 32px; }.gallery-filters { gap: 3px; }.gallery-filters button { font-size: 11px; padding: 8px; }.social-links { gap: 3px; }
 }
+
+/* Personal identity and connections. */
+.about-connect { border-top: 1px solid #4a4d53; margin: -10px 0 28px; padding-top: 22px; }
+.about-connect > .eyebrow { color: #a6b9d5; font-size: 10px; }
+.about-socials { padding: 16px 0 0; gap: 12px; }
+.social-links svg { width: 25px; height: 25px; color: #e6e8eb; transition: color .25s, transform .3s var(--motion-ease); }
+.social-links a:hover svg, .social-links a:focus-visible svg { color: #172744; transform: rotate(-7deg); }
+.about-badges span { transition: color .25s, border-color .25s, background .25s; }
+.about-badges span:hover { color: #eef4ff; border-color: #72a7ff; background: #72a7ff20; }
+.portrait-card .portrait-visual img { object-position: 50% 51%; }
+.musician-visual img { object-position: 48% 45%; filter: grayscale(1); }
+.identity-card:hover .musician-visual img,
+.identity-card:focus-visible .musician-visual img { filter: grayscale(0); }
+.personal-title { font-size: 30px; margin-top: 13px; }
+.personal-details { display: grid; gap: 9px; margin-top: 17px; font-size: 16px; line-height: 1.35; }
+.personal-details > span { display: grid; grid-template-columns: 80px 1fr; align-items: baseline; gap: 10px; }
+.detail-label { display: block; font: 9px/1.5 var(--mono); letter-spacing: .5px; color: #a9c8f6; }
+.personal-motto { display: grid; gap: 6px; margin: 17px 0 18px; font-size: 16px; line-height: 1.5; }
+.interest-notes { display: block; font: 10px/1.6 var(--mono); margin: 20px 0; }
+@media (max-width: 800px) { .personal-details > span { grid-template-columns: 1fr; gap: 2px; } .personal-details { gap: 8px; } .personal-motto { font-size: 15px; margin-top: 13px; } .personal-title { font-size: 28px; } }
+@media (max-width: 540px) { .social-links { gap: 9px; } .social-links a { width: 44px; height: 44px; } .social-links svg { width: 22px; height: 22px; } .portrait-card { min-height: 520px; } .personal-details { font-size: 16px; } .about-socials { gap: 9px; } }
+@media (max-width: 360px) { .social-links { gap: 10px; max-width: 210px; } }
+
+/* Let the grid control width; let both faces contribute to card height.
+   An aspect ratio combined with min-height previously widened the columns. */
+.about-panel .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+.card-grid > .identity-card { min-width: 0; width: 100%; max-width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; }
+.card-grid .card-inner { display: grid; grid-template-columns: minmax(0, 1fr); height: 100%; min-height: 500px; }
+.card-grid .card-face { position: relative; inset: auto; grid-area: 1 / 1; min-width: 0; }
+.card-grid .card-front { display: grid; grid-template-rows: minmax(300px, 1fr) 92px; }
+.card-grid .card-visual { min-width: 0; min-height: 0; }
+.card-grid .card-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card-grid .card-caption { min-width: 0; min-height: 0; gap: 14px; }
+.card-grid .card-caption > span:first-child { min-width: 0; }
+.card-grid .round-arrow { flex-shrink: 0; }
+.card-grid .card-back { min-height: 0; overflow-wrap: anywhere; }
+.card-grid .card-back > span { flex-shrink: 0; }
+.card-grid .back-bottom { gap: 12px; padding-top: 15px; }
+.card-grid .personal-details > span { grid-template-columns: 80px minmax(0, 1fr); }
+.card-grid .portrait-visual img { transform: scale(1); }
+.card-grid .portrait-card .portrait-visual img { object-position: 50% 38%; }
+.card-grid .musician-visual img { object-position: 48% 40%; }
+.motion-enabled .card-grid .identity-card:hover .portrait-visual img { transform: scale(1.035); }
+@media (max-width: 900px) {
+  .card-grid .personal-details > span { grid-template-columns: 1fr; gap: 2px; }
+  .card-grid .photo-caption { font-size: 29px; }
+  .card-grid .card-inner { min-height: 520px; }
+}
+@media (max-width: 680px) {
+  .about-panel .card-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .card-grid .card-inner { min-height: 500px; }
+  .card-grid .card-caption { padding: 16px 18px; }
+  .card-grid .personal-details > span { grid-template-columns: 80px minmax(0, 1fr); }
+}
+@media (max-width: 380px) {
+  .card-grid .personal-details > span { grid-template-columns: 1fr; }
+  .card-grid .card-inner { min-height: 540px; }
+  .card-grid .card-back { padding: 20px; }
+  .card-grid .card-caption strong { font-size: 21px; }
+  .card-grid .photo-caption { font-size: 27px; }
+  .card-grid .photo-stamp { display: none; }
+}

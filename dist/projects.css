@@ -71,3 +71,22 @@ body.project-dialog-open{overflow:hidden}
 @media(max-width:540px){.projects-toolbar{display:block;padding:13px 0;margin-top:22px}.project-filters{gap:6px}.project-filter{padding:9px 8px;font-size:10px;flex:1}.project-count{max-width:none;text-align:left;margin-top:12px}.projects-placeholder-note{font-size:13px;margin:18px 0}.projects-grid{grid-template-columns:1fr;gap:22px;margin-top:19px}.project-visual{min-height:210px;aspect-ratio:1.45}.project-card h3{font-size:31px}.project-card-summary{font-size:16px}.project-card-topline{font-size:11px}.project-placeholder{font-size:10px}.project-open{font-size:12px}.projects-endnote{font-size:7px;letter-spacing:0;gap:7px;margin-top:27px}.projects-endnote>span:last-child{font-size:21px}.project-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.project-dialog-body{padding:23px 20px}.project-dialog-top{padding:11px 15px}.project-dialog-top .eyebrow{font-size:10px}.project-dialog-facts{grid-template-columns:1fr;gap:23px}.project-dialog-foot{font-size:8px;padding:14px 15px;gap:10px}.project-dialog-links a{flex:1;gap:15px}.project-dialog-summary{font-size:17px}}
 @media(prefers-reduced-motion:reduce){html:not(.motion-enabled) .project-card:hover,html:not(.motion-enabled) .project-card:hover .project-art,html:not(.motion-enabled) .project-open:hover>span:last-child{transform:none}}
 .motion-paused .project-card:hover,.motion-paused .project-card:hover .project-art,.motion-paused .project-open:hover>span:last-child{transform:none}
+
+/* Supplied project screenshots: preserve the whole interface. */
+.project-visual.has-project-image { height: 280px; min-height: 0; aspect-ratio: auto; background: #10151c; }
+.has-project-image .project-art, .has-project-image .project-visual-number { display: none; }
+.has-project-image .project-image { object-fit: contain; padding: 39px 12px 12px; transition: transform .45s var(--motion-ease); }
+.project-card:hover .project-image { transform: scale(1.025); }
+.project-status { padding: 4px 7px; border: 1px solid #72a7ff80; color: #b9d3ff; font: 10px var(--mono); }
+.project-gallery[hidden], .project-dialog-facts > [hidden] { display: none; }
+.project-gallery { margin-top: 25px; }
+.project-gallery figure { margin: 0; background: #10151c; border: 1px solid #46556c; border-radius: 7px; overflow: hidden; }
+.project-gallery-image { width: 100%; height: min(52dvh, 480px); object-fit: contain; padding: 12px; }
+.project-gallery figcaption { padding: 10px 14px; border-top: 1px solid #39475c; color: #a7c6f3; font: 9px var(--mono); }
+.project-thumbnails { display: flex; gap: 10px; padding: 12px 2px 6px; flex-wrap: wrap; }
+.project-thumbnail { width: 68px; height: 70px; padding: 4px; border: 1px solid #4c5c73; background: #111923; border-radius: 4px; }
+.project-thumbnail img { object-fit: contain; }
+.project-thumbnail[aria-pressed='true'] { border: 2px solid var(--blue); background: #72a7ff20; }
+.project-thumbnail:hover { border-color: var(--white); }
+.motion-paused .project-card:hover .project-image { transform: none; }
+@media(max-width:540px) { .project-visual.has-project-image { height: 285px; } .project-gallery-image { height: 330px; max-height: 50dvh; padding: 6px; } .project-thumbnail { width: 54px; height: 58px; } }

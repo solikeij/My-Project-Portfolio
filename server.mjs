@@ -4,7 +4,7 @@ import {createReadStream} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 const root = fileURLToPath(new URL('./dist/', import.meta.url));
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.vtt':'text/vtt; charset=utf-8'};
+const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.jfif':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.vtt':'text/vtt; charset=utf-8'};
 http.createServer(async(req,res)=>{
   try {
     if (!['GET','HEAD'].includes(req.method)) { res.writeHead(405, {'Allow':'GET, HEAD'}).end(); return; }
@@ -13,7 +13,7 @@ http.createServer(async(req,res)=>{
     if (!filename.startsWith(root)) {res.writeHead(403);res.end();return;}
     const file = await stat(filename);
     if (!file.isFile()) { res.writeHead(404).end(); return; }
-    const headers = {'Content-Type':types[path.extname(filename)] || 'application/octet-stream','Cache-Control':'no-cache','Accept-Ranges':'bytes'};
+    const headers = {'Content-Type':types[path.extname(filename).toLowerCase()] || 'application/octet-stream','Cache-Control':'no-cache','Accept-Ranges':'bytes'};
     let start = 0;
     let end = file.size - 1;
     let status = 200;

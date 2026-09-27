@@ -248,6 +248,11 @@
             { opacity: 0, transform: 'translateY(90%) rotateX(-65deg)' },
             { opacity: 1, transform: 'translateY(0) rotateX(0)' },
           ], { delay: index * 85 }));
+        } else if (entry.target.matches('.about-socials, .about-badges')) {
+          [...entry.target.children].forEach((item, index) => animate(item, [
+            { opacity: 0, transform: 'translateY(15px) scale(.92)' },
+            { opacity: 1, transform: 'translateY(0) scale(1)' },
+          ], { duration: 550, delay: index * 65 }));
         } else if (entry.target.matches('.identity-card')) {
           // Animate the front face without flattening the card's 3D root.
           animate(entry.target.querySelector('.card-front'), [

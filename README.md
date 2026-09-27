@@ -13,7 +13,7 @@ Open `dist/index.html` directly in a browser, or run `node server.mjs` from this
 - `dist/motion.css`: the elastic logo loop, blue signal sweep, scrolling type strip, rolling navigation, and hover effects.
 - `dist/opening.css` and `dist/opening.js`: the 3.3-second full-screen opening with keij and King James De Matta, followed by the homepage entrance. Refresh the page to replay it. Skip intro or Escape opens the homepage immediately.
 - `dist/portfolio-data.js`: the shared, editable video and project content.
-- `dist/portfolio.css` and `dist/portfolio.js`: the single video showcase, 24-item tool gallery, social logo links, and responsive navigation/footer.
+- `dist/portfolio.css` and `dist/portfolio.js`: the single video showcase, 25-item tool gallery, social logo links, and responsive navigation/footer.
 - `dist/projects.css` and `dist/projects.js`: the homepage projects section, category filters, and project detail dialogs. The old `projects.html` URL redirects to `index.html#projects`.
 - `dist/script.js`: card flips, pointer movement, scroll reveals, active navigation, and the motion toggle.
 - `dist/assets/king-james.jpg`: the supplied portrait, used with CSS color treatments.
@@ -37,4 +37,4 @@ The showcase uses your supplied `dist/assets/video/My Video Editing Portfolio.mp
 
 Edit an entry in `projects` in `dist/portfolio-data.js`. Set the title, summary, description, role, stack array, and optional image. Add `liveUrl` and/or `repoUrl` only when those links exist; empty links remain hidden. Use the categories `Website`, `Application`, or `Design`, and set `placeholder` to `false` when ready. Duplicate an entry with a unique `id` for more projects.
 
-Project cards remain labeled placeholders until real information is added. Social profile URLs are the ones supplied by King James. Local tool/social icons and their upstream license information are in `dist/assets/icons/`.
+The three project entries use the supplied screenshots and links; PennyLedger is marked ongoing. Set a project?s screenshots array to add images to its detail gallery, and status to show a progress badge. Social profile URLs are the ones supplied by King James. Local tool/social icons and their upstream license information are in `dist/assets/icons/`.

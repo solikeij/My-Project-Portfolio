@@ -81,11 +81,12 @@
     dialog.querySelector('[data-dialog-description]').textContent = text(project.description, placeholder ? 'This is an editable project placeholder. An overview of the project, its purpose, and the process will be added here.' : 'The project overview will be added here.');
     dialog.querySelector('[data-dialog-role]').textContent = text(project.role, 'Role to be added.');
     const status = dialog.querySelector('[data-dialog-status]');
-    status.hidden = !placeholder;
-    status.textContent = placeholder ? 'Placeholder — details to be added' : '';
+    status.hidden = !placeholder && !project.status;
+    status.textContent = placeholder ? 'Placeholder — details to be added' : text(project.status);
 
     const stack = dialog.querySelector('[data-dialog-stack]');
     const tools = Array.isArray(project.stack) ? project.stack.map(value => text(value)).filter(Boolean) : [];
+    stack.parentElement.hidden = !tools.length && !placeholder;
     stack.replaceChildren(...(tools.length ? tools.map(tool => create('li', '', tool)) : [create('li', 'is-pending', 'Tools to be added.')]));
 
     const links = dialog.querySelector('[data-dialog-links]');
@@ -104,6 +105,35 @@
     });
     links.hidden = !links.childElementCount;
     dialog.querySelector('[data-dialog-pending]').hidden = Boolean(links.childElementCount);
+    const gallery = dialog.querySelector('[data-project-gallery]');
+    const galleryImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = gallery.querySelector('[data-gallery-thumbnails]');
+    const screenshots = (Array.isArray(project.screenshots) ? project.screenshots : [project.image]).map(safeImageUrl).filter(Boolean);
+    thumbnails.replaceChildren();
+    gallery.hidden = !screenshots.length;
+    galleryImage.removeAttribute('src');
+    function selectScreenshot(index) {
+      stopAnimation(galleryImage);
+      galleryImage.src = screenshots[index];
+      galleryImage.alt = `${title} — screenshot ${index + 1} of ${screenshots.length}`;
+      caption.textContent = `SCREEN ${String(index + 1).padStart(2, '0')} / ${String(screenshots.length).padStart(2, '0')}`;
+      [...thumbnails.children].forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+      animate(galleryImage, [{ opacity: .4 }, { opacity: 1 }], { duration: 250 });
+    }
+    screenshots.forEach((src, index) => {
+      const button = create('button', 'project-thumbnail');
+      button.type = 'button';
+      button.setAttribute('aria-label', `Show screenshot ${index + 1} of ${title}`);
+      const image = create('img', '');
+      image.src = src;
+      image.alt = '';
+      image.loading = 'lazy';
+      button.append(image);
+      button.addEventListener('click', () => selectScreenshot(index));
+      thumbnails.append(button);
+    });
+    if (screenshots.length) selectScreenshot(0);
     dialog.showModal();
     document.body.classList.add('project-dialog-open');
     dialog.scrollTop = 0;
@@ -123,6 +153,7 @@
     visual.append(create('span', 'project-art'), create('span', 'project-visual-number', String(index + 1).padStart(2, '0')));
     const imageUrl = safeImageUrl(project.image);
     if (imageUrl) {
+      visual.classList.add('has-project-image');
       const image = create('img', 'project-image');
       image.alt = '';
       image.loading = 'lazy';
@@ -136,6 +167,7 @@
     const topline = create('div', 'project-card-topline');
     topline.append(create('span', '', category.toUpperCase()));
     if (project.placeholder === true) topline.append(create('span', 'project-placeholder', 'Placeholder'));
+    else if (project.status) topline.append(create('span', 'project-status', text(project.status)));
     const heading = create('h3', '', title);
     const summary = create('p', 'project-card-summary', text(project.summary, 'Project details are being added.'));
     const button = create('button', 'project-open');
@@ -183,6 +215,7 @@
     animate(button, [{ transform: 'translateY(2px)' }, { transform: 'translateY(0)' }], { duration: 220 });
   }));
   dialog.addEventListener('close', () => {
+    stopAnimation(dialog.querySelector('[data-gallery-image]'));
     stopAnimation(dialog.querySelector('.project-dialog-body'));
     document.body.classList.remove('project-dialog-open');
     if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
