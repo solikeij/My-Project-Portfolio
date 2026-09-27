@@ -164,3 +164,29 @@
   .card-grid .photo-caption { font-size: 27px; }
   .card-grid .photo-stamp { display: none; }
 }
+.email-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  margin: 20px 0 28px;
+  font-size: 14px;
+}
+.email-contact > span {
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: #aeb8c9;
+}
+.email-contact a {
+  color: var(--blue);
+  overflow-wrap: anywhere;
+  text-underline-offset: 4px;
+}
+.email-contact a:hover,
+.email-contact a:focus-visible { color: #fff; }
+.email-contact small {
+  flex-basis: 100%;
+  color: #aeb8c9;
+  font-size: 11px;
+}
