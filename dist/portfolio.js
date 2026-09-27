@@ -35,6 +35,7 @@
     ['C#', 'csharp', 'development', 'Language', 'C#'],
     ['Git', 'git', 'development', 'Version control', 'Git'],
     ['Roblox Studio', 'robloxstudio', 'development', 'Game creation', 'RS'],
+    ['AWS', 'aws', 'development', 'Cloud services', 'AWS'],
     ['Figma', 'figma', 'creative', 'Interface design', 'Fi'],
     ['CapCut', 'capcut', 'creative', 'Video editing', 'Cc'],
     ['Canva', 'canva', 'creative', 'Visual design', 'Ca'],

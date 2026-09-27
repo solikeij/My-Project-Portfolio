@@ -13,7 +13,7 @@ Open `dist/index.html` directly in a browser, or run `node server.mjs` from this
 - `dist/motion.css`: the elastic logo loop, blue signal sweep, scrolling type strip, rolling navigation, and hover effects.
 - `dist/opening.css` and `dist/opening.js`: the 3.3-second full-screen opening with keij and King James De Matta, followed by the homepage entrance. Refresh the page to replay it. Skip intro or Escape opens the homepage immediately.
 - `dist/portfolio-data.js`: the shared, editable video and project content.
-- `dist/portfolio.css` and `dist/portfolio.js`: the single video showcase, 23-item tool gallery, social logo links, and responsive navigation/footer.
+- `dist/portfolio.css` and `dist/portfolio.js`: the single video showcase, 24-item tool gallery, social logo links, and responsive navigation/footer.
 - `dist/projects.css` and `dist/projects.js`: the homepage projects section, category filters, and project detail dialogs. The old `projects.html` URL redirects to `index.html#projects`.
 - `dist/script.js`: card flips, pointer movement, scroll reveals, active navigation, and the motion toggle.
 - `dist/assets/king-james.jpg`: the supplied portrait, used with CSS color treatments.
