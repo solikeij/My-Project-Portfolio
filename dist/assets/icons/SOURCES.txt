@@ -1,0 +1,39 @@
+java.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg
+html.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg
+css.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg
+javascript.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg
+react.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg
+php.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg
+bootstrap.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg
+tailwind.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg
+vite.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg
+mysql.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg
+cpp.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg
+kotlin.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg
+flutter.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg
+csharp.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg
+figma.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg
+canva.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg
+aseprite.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/aseprite.svg
+claude.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/claude.svg
+chatgpt.svg | https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/openai.svg
+capcut.svg | https://raw.githubusercontent.com/LawnchairLauncher/lawnicons/develop/svgs/capcut.svg
+
+License notices:
+- Devicon assets: MIT; see LICENSE-devicon.txt.
+- Simple Icons assets (aseprite.svg, claude.svg, robloxstudio.svg, facebook.svg, instagram.svg, discord.svg, github.svg, spotify.svg): CC0 1.0 Universal; see LICENSE-simple-icons.txt.
+- Lobe Icons assets (chatgpt.svg, OpenAI mark; gemini.svg, full-color mark): MIT; see LICENSE-lobe-icons.txt.
+- Lawnicons asset (capcut.svg): Apache 2.0; see LICENSE-lawnicons.txt.
+
+Modification: capcut.svg has an explicit viewBox="0 0 192 192" added to preserve responsive scaling. Its paths are unchanged.
+Brand logos remain the trademarks of their respective owners.
+
+Additional technology and social logos:
+gemini.svg | https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/gemini-color.svg
+git.svg | https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg
+robloxstudio.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/robloxstudio.svg
+facebook.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/facebook.svg
+instagram.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg
+discord.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/discord.svg
+github.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg
+spotify.svg | https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/spotify.svg

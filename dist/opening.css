@@ -1,0 +1,111 @@
+/* A short title sequence. A closed native dialog never blocks the homepage. */
+.opening-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 5px solid var(--blue);
+  background: #0d1119;
+  color: var(--white);
+  overflow: hidden;
+}
+.opening-intro::backdrop { background: transparent; }
+.opening-intro[open] { display: grid; place-items: center; }
+.intro-running { overflow: hidden; }
+.intro-running .machine *, .intro-running .machine *::after { animation-play-state: paused !important; }
+.opening-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .45;
+  background: linear-gradient(#72a7ff08 1px, transparent 1px) center / 64px 64px,
+    linear-gradient(90deg, #72a7ff08 1px, transparent 1px) center / 64px 64px,
+    radial-gradient(ellipse at 50% 45%, #1e355a80 0%, transparent 65%);
+}
+.opening-intro::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid #72a7ff20;
+  pointer-events: none;
+}
+.opening-top, .opening-bottom {
+  position: absolute;
+  left: clamp(30px, 5vw, 80px);
+  right: clamp(30px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 11px var(--mono);
+  letter-spacing: 1.5px;
+  color: #8999b3;
+}
+.opening-top { top: 40px; }
+.opening-bottom { bottom: 36px; justify-content: space-between; }
+.opening-emblem { width: 31px; height: 31px; display: grid; place-items: center; color: #0d1119; background: var(--blue); border-radius: 3px; font: 900 31px/1 var(--body); }
+.opening-edition { margin-left: auto; }
+.opening-center { position: relative; width: min(90%, 880px); text-align: center; padding-bottom: 12px; }
+.opening-cross { display: inline-block; color: var(--blue); font: 35px/1 var(--body); margin-bottom: 22px; }
+.opening-eyebrow { font: 11px var(--mono); letter-spacing: 4px; color: #abc2e8; }
+.opening-word {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  font: italic 900 clamp(140px, 24vw, 310px)/1.06 var(--body);
+  letter-spacing: -.065em;
+  padding: 0 .1em .1em 0;
+  margin-top: 4px;
+  color: var(--white);
+  text-shadow: 0 0 60px #72a7ff12;
+}
+.opening-letter, .opening-dot { display: inline-block; transform-origin: 50% 85%; }
+.opening-dot { color: var(--blue); }
+.opening-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .35em;
+  margin-top: 5px;
+  padding: 0 10px;
+  font: 700 clamp(19px, 2.3vw, 28px)/1.5 var(--display);
+  text-transform: uppercase;
+  letter-spacing: clamp(2px, .4vw, 5px);
+  color: #c3d7f8;
+}
+.opening-name > span { display: inline-block; }
+.opening-rule { width: min(230px, 65%); height: 2px; background: #72a7ff20; margin: 30px auto 17px; overflow: hidden; }
+.opening-rule > span { display: block; width: 100%; height: 100%; background: var(--blue); transform-origin: left; }
+.opening-caption { font: 10px var(--mono); letter-spacing: 2px; color: #7e91af; }
+.opening-skip { display: flex; align-items: center; gap: 25px; padding: 10px 15px; min-height: 44px; border: 1px solid #72a7ff50; border-radius: 3px; background: #72a7ff08; color: #d6e5fd; font: 12px var(--mono); letter-spacing: .5px; }
+.opening-skip > span { color: var(--blue); font: 25px/1 var(--body); }
+.opening-skip:hover { background: #72a7ff1a; border-color: var(--blue); }
+.opening-skip:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
+@media (max-width: 600px) {
+  .opening-intro::after { inset: 12px; }
+  .opening-top { top: 29px; font-size: 9px; gap: 10px; letter-spacing: 1px; }
+  .opening-edition { display: none; }
+  .opening-bottom { bottom: 26px; gap: 10px; }
+  .opening-bottom > span { font-size: 8px; letter-spacing: .4px; max-width: 130px; line-height: 1.7; }
+  .opening-center { width: 94%; padding-bottom: 25px; }
+  .opening-word { font-size: clamp(128px, 40vw, 230px); margin-top: 10px; }
+  .opening-eyebrow { font-size: 9px; letter-spacing: 2px; }
+  .opening-name { font-size: clamp(17px, 4.5vw, 24px); gap: .3em; letter-spacing: 2px; }
+  .opening-caption { font-size: 8px; letter-spacing: 1.5px; }
+  .opening-cross { font-size: 29px; margin-bottom: 17px; }
+  .opening-skip { font-size: 11px; gap: 12px; padding: 9px 12px; }
+}
+@media (max-height: 560px) and (min-width: 601px) {
+  .opening-top { top: 25px; }
+  .opening-bottom { bottom: 23px; }
+  .opening-word { font-size: clamp(95px, 26vh, 150px); }
+  .opening-cross { display: none; }
+  .opening-name { font-size: 18px; }
+  .opening-rule { margin-top: 14px; margin-bottom: 10px; }
+  .opening-center { padding: 0; }
+}

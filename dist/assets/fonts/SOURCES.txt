@@ -1,0 +1,24 @@
+Google Fonts stylesheet: https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Mono:wght@400;700&display=swap
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+Self-hosted subset: latin. Files are unmodified WOFF2 fonts from the exact stylesheet response.
+
+barlow-italic-700-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2
+barlow-italic-800-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfOc5mouvTo.woff2
+barlow-italic-900-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHsv4kjgoGqM7E_CfO452ouvTo.woff2
+barlow-normal-400-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2
+barlow-normal-500-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2
+barlow-normal-600-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2
+barlow-normal-700-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2
+barlow-normal-800-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3q-0s51os.woff2
+barlow-normal-900-latin.woff2 | https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3j-ws51os.woff2
+barlow-condensed-normal-500-latin.woff2 | https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuQ.woff2
+barlow-condensed-normal-600-latin.woff2 | https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2
+barlow-condensed-normal-700-latin.woff2 | https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2
+barlow-condensed-normal-800-latin.woff2 | https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B47b1z3bWuQ.woff2
+barlow-condensed-normal-900-latin.woff2 | https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B45L0z3bWuQ.woff2
+space-mono-normal-400-latin.woff2 | https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2
+space-mono-normal-700-latin.woff2 | https://fonts.gstatic.com/s/spacemono/v17/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2
+
+OFL-Barlow.txt | https://raw.githubusercontent.com/google/fonts/main/ofl/barlow/OFL.txt
+OFL-Barlow-Condensed.txt | https://raw.githubusercontent.com/google/fonts/main/ofl/barlowcondensed/OFL.txt
+OFL-Space-Mono.txt | https://raw.githubusercontent.com/google/fonts/main/ofl/spacemono/OFL.txt
