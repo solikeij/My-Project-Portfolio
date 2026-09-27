@@ -36,6 +36,7 @@
     ['Git', 'git', 'development', 'Version control', 'Git'],
     ['GitHub', 'github', 'development', 'Code hosting', 'GH'],
     ['Replit', 'replit', 'development', 'Cloud IDE', 'Re'],
+    ['Docker', 'docker', 'development', 'Containers', 'Do'],
     ['Roblox Studio', 'robloxstudio', 'development', 'Game creation', 'RS'],
     ['AWS', 'aws', 'development', 'Cloud services', 'AWS'],
     ['Figma', 'figma', 'creative', 'Interface design', 'Fi'],

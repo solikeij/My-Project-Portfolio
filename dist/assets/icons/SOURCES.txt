@@ -44,3 +44,5 @@ License: Devicon MIT; see LICENSE-devicon.txt.
 Modification: aws.svg changes the AWS lettering fill from #252f3e to #f2f3ee for contrast on the dark toolkit tile. The original #f90 orange smile, path geometry, and viewBox are unchanged.
 
 replit.svg | Locally drawn geometric Replit-style mark; no external SVG copied.
+
+Docker: docker.svg is a locally drawn container-whale illustration; no external SVG copied.
